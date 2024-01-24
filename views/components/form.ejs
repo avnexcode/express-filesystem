@@ -1,0 +1,41 @@
+<div class="w-full p-6 m-auto bg-white rounded-md shadow-md ring-2 ring-gray-800/50 lg:max-w-xl">
+    <form class="space-y-4" method="post" action="">
+        <input type="hidden" id="user_id" name="user_id">
+        <div>
+            <label class="label">
+                <span class="text-base label-text">Name</span>
+            </label>
+            <input type="text" placeholder="Name" class="w-full input input-bordered" name="name" autofocus/>
+        </div>
+        <div>
+            <label class="label">
+                <span class="text-base label-text">Email</span>
+            </label>
+            <input type="email" placeholder="Email Address" class="w-full input input-bordered" name="email" />
+        </div>
+        <div>
+            <label class="label">
+                <span class="text-base label-text">Phone Number</span>
+            </label>
+            <input type="text" placeholder="Phone Number" class="w-full input input-bordered" name="phone" />
+        </div>
+        <div>
+            <button class="btn btn-block">Sign Up</button>
+        </div>
+        <span>Already have an account ?
+            <a href="#" class="text-blue-600 hover:text-blue-800 hover:underline">Login</a></span>
+    </form>
+</div>
+
+<script>
+    const containerId = document.querySelector("#user_id")
+    const randomId = () => {
+        let output = ""
+        let char = "qwertyuiopasdfghjklzxcvbnmQWERTYUIOPASDFGHJKLZXCVBNM1234567890"
+        for (let i = 0; i < 12; i++) {
+            output += char[~~(Math.random() * char.length)]
+        }
+        return output
+    }
+    containerId.value = randomId()
+</script>

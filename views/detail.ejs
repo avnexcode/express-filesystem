@@ -1,0 +1,13 @@
+<div class="flex w-full justify-center mt-10">
+    <div class="card w-96 bg-neutral text-neutral-content">
+        <div class="card-body items-center text-center">
+            <h2 class="card-title"><%= user.name %></h2>
+            <p><%= user.email %></p>
+            <p><%= user.phone %></p>
+            <div class="card-actions justify-end flex gap-10 items-center">
+                <a href="/">&laquo;Back</a>
+                <a href="/dashboard/update?id=<%= user.user_id %>" class="btn">Update</a>
+            </div>
+        </div>
+    </div>
+</div>

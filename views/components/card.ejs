@@ -1,0 +1,12 @@
+<div class="card w-96 bg-primary text-primary-content">
+  <div class="card-body">
+    <h2 class="card-title"><%= user.name %></h2>
+    <p><%= user.email %></p>
+    <p><%= user.phone %></p>
+    <div class="card-actions justify-end">
+      <a href="/dashboard/delete/<%= user.user_id %>" onclick="return confirm('Yaqen?')" class="btn">Delete</a>
+      <a href="/dashboard/detail?id=<%= user.user_id %>" class="btn">Detail</a>
+      <a href="/dashboard/update?id=<%= user.user_id %>" class="btn">Update</a>
+    </div>
+  </div>
+</div>
